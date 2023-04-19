@@ -1,0 +1,13 @@
+input{
+    display: block;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 15px auto;
+    background: aquamarine;
+
+    background: -moz-linear-gradient(top,rgb(243, 241, 114), rgb(41, 233, 15));
+    background: -webkit-linear-gradient(top, rgb(243, 241, 114), rgb(41, 233, 15));
+    background: linear-gradient(top,rgb(243, 241, 114), rgb(41, 233, 15));
+}
