@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3.2</title>
+    <link rel="stylesheet" href="Practica3.2.css">
+    <script src="Practica3.2.js"></script>
+</head>
+<body>
+    <h1>Operaciones Matemáticas</h1>
+    <div>
+        <form method="post" enctype="text/plain">
+            <label for="no">Escribe un número:</label>
+            <br><br><input type="text" name="no" id="no" placeholder="No.1">
+            <br><br><label for="num">Escribe otro número:</label>
+            <br><br><input type="text" name="num" id="num" placeholder="No.2">
+            <br><br><input type="button" name="Sumar"   value="Suma números" onclick="suma()"/>
+            <input type="button" name="Resta"   value="Resta números" onclick="resta()"/>
+            <input type="button" name="Multiplicar"   value="Multiplica números" onclick="mult()"/>
+            <input type="button" name="Dividir"   value="Dividir números" onclick="div()"/>
+        </form>
+    </div>
+    <div class="res">
+        <h2>El resultado es:</h2>
+        <p id="result" name="result"></p>
+    </div>
+</body>
+</html>

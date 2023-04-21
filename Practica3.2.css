@@ -1,0 +1,15 @@
+form{
+    background-color: rgb(207, 199, 199);
+    display: block;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 15px auto;
+}
+.res{
+    background-color: rgb(198, 235, 156);
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+}
