@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Gráfica</title>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawSeriesChart);
+    
+        function drawSeriesChart() {
+    
+          var data = google.visualization.arrayToDataTable([
+            ['Nombre', 'Edad', 'Habilidades', 'Juego',     'Debut'],
+            ['Shulk',    17,              10,      'Xenoblade Chronicles',  2008],
+            ['Rex',    12,              12,      'Xenoblade Chronicles 2',         2017],
+            ['Pyra/Mythra',    60,               13,      'Xenoblade Chronicles 2',         2017],
+            ['Noah',    18,              6,      'Xenoblade Chronicles 3',    2022],
+            ['Zeke',    24,              6,         'Xenoblade Chronicles 2',         2017],
+            ['Mio',    20,              6,       'Xenoblade Chronicles 3',    2022],
+            ['Mathew',    20,              6,      'Xenoblade Chronicles 3',    2023],
+            ['A',    50,             8,      'Xenoblade Chronicles 3',    2023],
+            ['Jin',    50,               6,      'Xenoblade Chronicles 2',         2017],
+            ['Fiora',    17,              4,      'Xenoblade Chronicles',  2008]
+          ]);
+    
+          var options = {
+            title: 'Personajes-Xeno Saga' +
+              ' X=Edad, Y=Habilidades, Bubble size=Menor tiempo de debut, Bubble color=Juego',
+            hAxis: {title: 'Edad'},
+            vAxis: {title: 'Habilidades'},
+            bubble: {textStyle: {fontSize: 11}}
+          };
+    
+          var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+          chart.draw(data, options);
+        }
+        </script>  
+</head>
+<body>
+    <div id="series_chart_div" style="width: 1500px; height: 1000px;"></div>
+</body>
+</html>
