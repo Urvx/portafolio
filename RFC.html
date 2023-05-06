@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4</title>
+    <script src="RFC.js"></script>
+    <link rel="stylesheet" href="RFC.css"/>
+</head>
+<body>
+    <h1>Obten tu RFC</h1>
+    <h3>Llena los siguientes espacios</h3>
+    <form method="post" enctype="text/plain">
+        <label for="nombre">Escribe tu nombre:</label><br>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="ap">Escribe tu apellido paterno:</label><br>
+        <input type="text" name="ap" id="ap"><br/>
+        <label for="am">Escribe tu apellido materno:</label><br>
+        <input type="text" name="am" id="am"><br/><br>
+        <label for="year">Escribe tu año de nacimiento:<br>(Completo-Ej.-2000)</label><br/>
+        <input type="number" minlength="4"  maxlength="4" name="year" id="year" required><br/>
+        <label for="mes">Escribe tu mes de nacimiento:<br>(Mes de Enero a Septiembre->01-09)</label><br/>
+        <input type="number" name="mes" id="mes"><br/>
+        <label for="day">Escribe tu día de nacimiento:<br>(Día menor a 10->01-09)</label><br/>
+        <input type="number" name="day" id="day"><br/>
+        <label for="resultado">Resultado:</label><br/>
+        <input type="text" name="resultado" id="resultado"><br/><br/>
+
+        <input type="button" name="boton" id="boton" onclick="rfc()" value="Obtener RFC"><br/><br/>
+    </form>
+</body>
+</html>

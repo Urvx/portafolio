@@ -1,0 +1,19 @@
+form{
+    display: block;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid rgb(48, 3, 211);
+    text-align: center;
+    margin: 15px auto;
+    background: rgb(93, 245, 101);
+    position: absolute;
+    font-family: 'fuente', serif;
+    left: 40%;
+    bottom: 25%;
+}
+body{
+    background-color: rgb(243, 205, 148);
+}
+h3{
+    text-align: center;
+}
