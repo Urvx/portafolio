@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<link rel="stylesheet" href="ObtTot.css">
+</head>
+<script>
+var total;
+function califica()//Función de Script que se encarga de contar el puntaje obtenido en la encuesta
+    {var total=0;//Variable que guarda el valor de el puntaje en el ciclo
+    	for (var x=1;x<=5;x++)//Ciclo que evisa todo el recorrido del prorama
+    	{
+        var res=0;//Variable que ayuda al conteo de la variable total
+        var nom="r"+x;//variable que ayuda a elegir la pregunta en la que se encuentra el programa: r1...r5
+        var resul=document.getElementsByName(nom);//Variable que ayuda al ciclo a tener control de cual pregunta se está evaluando
+        for(var i=0;i<resul.length;i++)//Ciclo que checa la variable de la encuesta
+        {
+            if(resul[i].checked==true)//Revisa el valor obtenido por la función
+                res=parseInt(resul[i].value);//Da el valor al arreglo correspondiente a la respuesta
+        }
+        total=total+res;//Se declará el valor que lleva el usuario con respecto a la encuesta
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";//Muestra el puntaje final obtenido
+        }
+        if(total==25)//Ciclo que evalua el puntaje final del usuario
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";//En caso de ser perfecto, imprime este mensaje
+        else
+        	if(total==20)
+        	document.getElementById("comentario").innerHTML="Regular!!";//En caso de ser casi perfecto, imprime este mensaje
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";//En caso de ser deficiente, imprime este mensaje
+    }
+
+ 
+</script>
+
+<body>
+    <div id="contiene"><!--Título de la encuesta-->
+	<h1>Responde la encuesta-Xenoblade</h1>
+	<h2>Tu opinión es importante</h2>
+<form id="encuesta">
+<div>
+	
+	<ul><!--Inicio del formulario-->
+
+		<li>Pregunta 1-¿Quién es el(la) protagonista de Xenoblade Chronicles X</li><!--Pregunta uno con respuestas posibles-->
+		<input type="radio" name="r1" id="r1" value="5"/>Elma<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Rex<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Shulk<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Noah<br/>
+		
+		<li>Pregunta 2-¿Cómo se llama el creador del universo actual de Xenoblade Chronicles 1 y 2?</li><!--Pregunta dos con respuestas posibles-->
+		<input type="radio" name="r2" id="r2" value="5"/>Klaus<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Zanza<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Egil<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Malos<br/>
+
+		<li>Pregunta 3-¿Cómo se le conoce al "Conducto"</li><!--Pregunta tres con respuestas posibles-->
+		<input type="radio" name="r3" id="r3" value="5"/>Zohar<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Ymir<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Mekhonis<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Origen<br/>
+
+        <li>Pregunta 4-Nombre de los bandos enfrentados en Xenoblade Chronicles 3</li><!--Pregunta cuatro con respuestas posibles-->
+		<input type="radio" name="r4" id="r4" value="5"/>Keves y Agnus<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Pilotos y Blades<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Bionis y Mekhonis<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Nopons y Tukhanes<br/>
+
+		<li>Pregunta 5-Especia al que pertenecen los cobsul de Xenoblade Chronicles</li> <!--Pregunta cinco con respuestas posibles-->
+		<input type="radio" name="r5" id="r5" value="5"/>Moebius<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Uroboros<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Lost Numbers<br/>
+		<input type="radio" name="r5" id="r5" value="0"/>Heroes<br/>
+	</ul>
+	
+</div>
+<input type="button" value="Calificar" onclick="califica()" id="boton"><!--Boton con el cual el usuario ejecuta la función Script-->
+<p></p>
+<p id="total">   </p><!--Toma el valor de la función correspondiente-->
+<p id="comentario">   </p><!--Toma el valor de la función correspondiente-->
+<iframe frameborder="0" width="600" height="500"></iframe>
+</form>
+</div>
+</body>
+</html>

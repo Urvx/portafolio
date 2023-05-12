@@ -1,0 +1,23 @@
+#encuesta{
+    display: block;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid rgb(48, 3, 211);
+    text-align: center;
+    margin: 15px auto;
+    background: rgb(247, 237, 186);
+    position: absolute;
+    font-family: 'fuente', serif;
+    left: 40%;
+}
+body{
+    background-color: rgb(235, 104, 64);
+}
+h1,h2{
+    text-align: center;
+}
+#boton{
+    background-color: brown;
+    left: 40%;
+}
+    
