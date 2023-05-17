@@ -34,3 +34,131 @@ form{
     background-color: aliceblue;
     width: 60%;
 }
+#cajaformulario{
+    float: left;
+    padding: 20px;
+    border: 1px solid #999999;
+    }
+    #cajadatos{
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+    padding: 20px;
+    border: 1px solid #999999;
+    }
+    #clave, #texto{
+    width: 200px;
+    }
+    #cajadatos > div{
+    padding: 5px;
+    border-bottom: 1px solid #999999;
+    }
+    
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=submit] {
+        width: 100%;
+        background-color: #4DAFF6;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: #4465FB;
+    }
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    .blog{
+        background-color: cyan;
+    }
+    #act1{
+        background-color: darkorange;
+    }
+    #act2{
+        background-color: chartreuse;
+    }
+    #dlc{
+        height: 300px;
+        width: 200px;
+        border: 1px solid #ddd;
+        background: #f1f1f1;
+        overflow-y: scroll
+    }
+    .container {
+        position: relative;
+    }
+    
+    .container .slider {
+        display: flex;
+        background: #011b27;
+        padding: 2px;
+        width: 1000px;
+        height: 600px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    
+    .container .slider img {
+        margin: 3px;
+    }
+    
+    .container .control {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #02293b;
+        cursor: pointer;
+        object-fit: contain;
+        padding: 20px;
+    }
+    
+    .container .prev {
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .container .next {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+    #faq{
+        background-color: #999999;
+    }
+    #red{
+        background-color: aquamarine;
+    }
+    #red2{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+    }
+    #e3canc{
+        width:100%;
+        border: 5px;
+    }
+    #text{
+        top: 10%;
+    }
+    #tiendaf{
+        background-color: rgba(24, 12, 12, 0.589);
+    }
+    #tj, #dj{
+        width: 200px;
+        border: 5px solid rgb(238, 236, 230); 
+    }
