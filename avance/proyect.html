@@ -9,6 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="index6.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">	
+	<script type="text/javascript" src="PDF/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="PDF/js/jquery/jquery-ui-1.8.17.custom.min-js"></script>
+	<script type="text/javascript" src="PDF/jspdf.js"></script>
+	<script type="text/javascript" src="PDF/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="PDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="PDF/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="PDF/jspdf.plugin.from_html.js"></script>
+    <link rel="icon" type="image/jpg" href="cine/cinepolis.jpg"/>
 </head>
 <body>
     <nav>
@@ -30,8 +41,18 @@
         <p align="center"><img src="imgndex/gameawards.png" height="450 px" alt="GA" style="width: 75%px; float:center"/></p>
 
         <h1 align="center">El evento más importante del campo de los videojuegos ha sido cancelado</h1>
-        <p align="justify">A pesar de haber confirmado su regreso en este año 2023, Sony, Microsoft y Nintendo han confirmado su ausencia en dicho evento lo cual obligo que el evento sea cancelado totalmente.</p>
-        <p align="center"><iframe src="https://www.xataka.com.mx/videojuegos/e3-2023-cancelado-golpe-definitivo-que-termina-evento-importante-videojuegos-mundo" height="750px" width="1500px"></iframe></p>
+        <div style="background-color: blanchedalmond;">
+        <table id="e3canc">
+        <tr>
+            <td id="text"><p>A pesar de haber confirmado su regreso en este año 2023, Sony, Microsoft y Nintendo han confirmado su ausencia en dicho evento lo cual obligo que el evento sea cancelado totalmente.
+                Este evento ha sido el máximo exponente del género para todos aquellos interesados por decadas, lo cual genera la gran incognita de como se va a tratar el campo de los videojuegos a partir de ahora, 
+                también el si se planea reemplazar el evento por algún otro, ya sea con la misma esencia que tenía el E3 o generar algo completamente nuevo en base a todas las experiencias adquirida por los años que 
+                logro recopilar dicho evento.Puedes conocer más sobre la noticia la página adjunta.
+            </p></td>
+            <td><p><iframe src="https://www.xataka.com.mx/videojuegos/e3-2023-cancelado-golpe-definitivo-que-termina-evento-importante-videojuegos-mundo" align="right" height="300px" width="800px"> </iframe></p></td>
+        </tr>
+        </table>
+        </div>
 
     </section>
     <hr width="110%" size="25px" noshade color="gray">
@@ -160,6 +181,50 @@
         <a href="https://www.nintendo.com/store/merchandise/">Tienda de NINTENDO</a>
         <a href="https://gear.playstation.com/Main/Default?utm_id=PSD1234">Tienda de Playstation</a></p>
 
+        <div id="contiene">
+            <h1>Responde la encuesta si quieres ser parte de nuestro modesto y pequeño club</h1>
+                <h2>Primero demuestra ser capaz de merecerlo(Aunque no cambie mucho el trato de la página)</h2>
+                <h3>La encuesta tratará de temas relacionado con videojuegos, tanto de su lore como de las noticias en el mundo actual</h3>
+            <form>
+            <div>
+                
+                <ul>
+            
+                    <li>Pregunta 1.-¿Cuál fue el primer Final Fantasy que no fue lanzado en una consola de Nintendo?</li>
+                    <input type="radio" name="r1" id="r1" value="0"/>Final Fantasy Tactics<br/>
+                    <input type="radio" name="r1" id="r1" value="0"/>Final Fantasy VIII<br/>
+                    <input type="radio" name="r1" id="r1" value="5"/>Final Fantasy VII<br/>
+                    <input type="radio" name="r1" id="r1" value="0"/>Final Fantasy VI<br/>
+                    
+                    <li>Pregunta 2.-¿Cómo se llama el o la protagonista de la saga The Legend of Zelda?</li>
+                    <input type="radio" name="r2" id="r2" value="0"/>Ganon<br/>
+                    <input type="radio" name="r2" id="r2" value="5"/>Link<br/>
+                    <input type="radio" name="r2" id="r2" value="0"/>Zelda<br/>
+                    <input type="radio" name="r2" id="r2" value="0"/>Linebeck<br/>
+            
+                    <li>Pregunta 3.-¿Cuál de los siguientes juegos no es multiplataforma?</li>
+                    <input type="radio" name="r3" id="r3" value="0"/>Octopath Traveler II<br/>
+                    <input type="radio" name="r3" id="r3" value="0"/>Rocket League<br/>
+                    <input type="radio" name="r3" id="r3" value="0"/>Cyberpunk 2077<br/>
+                    <input type="radio" name="r3" id="r3" value="5"/>Silent Hill<br/>
+            
+                    <li>Pregunta 4.-¿Cuál de las siguientes sagas NO ha lanzado o lanzará una nueva entrega este 2023?</li>
+                    <input type="radio" name="r4" id="r4" value="5"/>Sonic The Hedgehog<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>The Legend of Zelda<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>Resident Evil<br/>
+                    <input type="radio" name="r4" id="r4" value="0"/>Fire Emblem<br/>
+                </ul>
+                
+            </div>
+            <input type="button" value="Calificar" onclick="califica()">
+            <input type="button" onclick="generar()" value="Generar PDF"/><br>
+            </form>
+            <p></p>
+            <p id="total">   </p>
+            <p id="comentario">   </p>
+            <iframe name="pdf" align="center" frameborder="0" width="1000" height="700"></iframe>
+            </div>
+        
     </section>
     <hr width="110%" size="25px" noshade color="gray">
     <section>
@@ -211,18 +276,23 @@
         <h2>Chatbot</h2>
         <p align="justify">Tambien puedes comunicarte con nuestro chatbot para una mejor interacción.</p>
 
-        <h2>Redes sociales relacionadas</2>
-            <h3 align="center"><a href="https://www.claners.com/" target="blank">Claners</a></h3>
-            <p align="center"><iframe src="https://www.claners.com/" height="1000px" width="1000px"></iframe></p>
-            <h3 align="center"><a href="https://www.levelup.com/" target="blank">LevelUp</a></h3>
-            <p align="center"><iframe src="https://www.levelup.com/" height="1000px" width="1000px"></iframe></p>
-
-            <h3>Nintendo</h3>
-            <h3 align="center"><a href="https://www.nintenderos.com/" target="blank">Nintenderos</a></h3>
-            <p align="center"><iframe src="https://www.nintenderos.com/" height="1000px" width="1000px"></iframe></p>
-            <h3>Playstation</h3>
-            <h3 align="center"><a href="https://vandal.elespanol.com/rankings/playstation-4" target="blank">Vandal</a></h3>
-            <p align="center"><iframe src="https://vandal.elespanol.com/rankings/playstation-4" height="1000px" width="1000px"></iframe></p>
+        <div id="red">
+            <h2>Redes sociales relacionadas</h2>
+            <table align="center" id="red2">
+                <tr>
+                <td><h3 align="center"><a href="https://www.claners.com/" target="blank">Claners</a></h3>
+                <p align="center"><iframe src="https://www.claners.com/" height="500px" width="500px"></iframe></p></td>
+                <td><h3 align="center"><a href="https://www.levelup.com/" target="blank">LevelUp</a></h3>
+                <p align="center"><iframe src="https://www.levelup.com/" height="500px" width="500px"></iframe></p></td>
+                </tr>
+                <tr>
+                <td><h3 align="center"><a href="https://www.nintenderos.com/" target="blank">Nintenderos</a></h3>
+                <p align="center"><iframe src="https://www.nintenderos.com/" height="500px" width="500px"></iframe></p></td>
+                <td><h3 align="center"><a href="https://vandal.elespanol.com/rankings/playstation-4" target="blank">Vandal</a></h3>
+                <p align="center"><iframe src="https://vandal.elespanol.com/rankings/playstation-4" height="500px" width="500px"></iframe></p></td>
+                </tr>
+            </table>
+            </div>
 
     </section>
 </body>
