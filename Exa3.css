@@ -1,0 +1,24 @@
+.form{
+    right: 50%;
+}
+#name{
+    background-color: rgb(126, 245, 245);
+    width: 50%;
+    height: 200%;
+}
+#boton{
+    background-color: rgb(132, 58, 201);
+    width: 50%;
+    font-family: 'Playfair Display', serif;
+}
+h2{
+    font-family: 'Bitter', serif;
+}
+label{
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+}
+#comentario{
+    font-family: 'Bitter', serif;
+    color: rgb(21, 11, 48);
+}

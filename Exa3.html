@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 3</title>
+    <script src="Exa3.js"></script>
+    <link rel="stylesheet" href="Exa3.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,100&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Wix+Madefor+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="form">
+        <h2>Puedes obtener producto gratis!!!</h2>
+        <form action="" method="post" enctype="text/plain">
+            <br/><label for="name">Tu nombre:</label>
+            <br/><input type="text" placeholder="Nombre de Usuario" name="name" id="name" required>
+            <br/><br/><label for="birth">Tu fecha de nacimiento: </label>
+            <input type="date" name="fecha" id="fecha"/>
+
+            <br/><br/><input type="submit" value="Enviar formulario" id="boton" onclick="cumple()"/>
+        </form>
+        <br/><br/><p id="comentario">   </p>
+    </section>
+</body>
+</html>
